@@ -83,7 +83,7 @@ function minimum (array){
 
 function createUser (name, date){
   var user = {
-    name : name,
+    name : name, 
     dob : date
   }
   return user
@@ -120,7 +120,10 @@ function addAge (user, Date){
 function createUsers (array1, array2){
     var newArray = [];
     for(var i = 0; i < array1.length; i++){
-      createUser (array1[i],array2[i])
+      var name = array1[i]
+      var dob = array2[i]
+      var object = {name : name, dob: dob}
+      newArray.push(object)
     } 
     return newArray
 }
@@ -129,3 +132,12 @@ function createUsers (array1, array2){
 // a Date object and returns the average age in years of the users on that date.
 // You do not have to handle the situation in which the current date is before
 // a user's date of birth.
+
+function averageAge (users, Date){
+  var ages:[];
+  for(var i = 0; i < users.length, i++){
+    var user = users[i]
+    ages.push(calculateAge(user, Date)){
+  }
+
+}
